@@ -64,4 +64,7 @@ async function sendWhatsAppMessage(to, text) {
   );
 }
 
-app.listen(3000, () => console.log('Webhook listening on port 3000'));
+app.listen(3000, () => {
+  console.log('Webhook listening on port 3000');
+  console.log(`[DEBUG] OPENAI_API_KEY: ${process.env.OPENAI_API_KEY?.slice(0, 20)}`);
+});
