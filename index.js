@@ -37,6 +37,7 @@ app.post('/webhook', async (req, res) => {
   const from = message.from;
   const text = message.text.body;
 
+  console.log(`[DEBUG] OPENAI_API_KEY: ${process.env.OPENAI_API_KEY?.slice(0, 20)}`);
   console.log(`Message from ${from}: ${text}`);
 
   res.sendStatus(200);
